@@ -1,0 +1,54 @@
+export type product = {
+	id: number;
+	name: string;
+	code: string;
+	category_id: number;
+	category_name: string;
+	category_slug: string;
+	subcategory_id: number;
+	subcategory_name: string;
+	subcategory_slug: string;
+	childcategory_id: number;
+	childcategory_name: string;
+	childcategory_slug: string;
+	brand_id: number;
+	brand_name: string;
+	model_id: number;
+	model_name: string;
+	image: string;
+	multiple_images: [
+		{
+			id: number;
+			product_id: number;
+			image: string;
+		}
+	];
+	short_description: string;
+	description: string;
+	specification: string;
+	warranty: string;
+	price: number;
+	discount_price: number;
+	stock: number;
+	unit_id: number;
+	unit_name: string;
+	tags: string;
+	video_url: string;
+	warrenty_id: number;
+	product_warrenty: string;
+	slug: string;
+	meta_title: string;
+	meta_keywords: string;
+	meta_description: string;
+	status: number;
+	flag_id: number;
+	flag_name: string;
+	flag_icon: string;
+	average_rating: number;
+	review_count: number;
+	reviews: object;
+	variants: object;
+	questions: object;
+	created_at: string;
+	updated_at: string;
+};
