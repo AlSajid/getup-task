@@ -10,9 +10,10 @@ export default function Products() {
 
 	const loadMore = (page: number) => {
 		setLoading(true);
+
 		fetch(`https://app-area.bestu.com.bd/api/nextjs/products?page=${page}`, {
 			headers: {
-				Authorization: "GETUPLTD2023NEXTJS"
+				Authorization: process.env.NEXT_PUBLIC_KEY
 			}
 		})
 			.then((res) => res.json())
