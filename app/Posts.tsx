@@ -17,7 +17,7 @@ export default async function Posts() {
 
 	return (
 		<>
-			<h1 className="text-center my-3 text-3xl">100 Posts</h1>
+			<h2 className="text-center my-3 text-3xl">100 Posts</h2>
 			{posts.map((post: post) => (
 				<Link href={`/post/${post.id}`} key={post.id}>
 					<div className=" bg-white p-3 shadow rounded my-1">

@@ -17,15 +17,15 @@ export default async function Page({params}: {params: {id: number}}) {
 	return (
 		<div className="flex justify-center items-center h-96">
 			<div className="m-3 bg-white p-3 w-96 shadow rounded-xl">
-				<h2 className="p-3">
+				<h3 className="p-3">
 					<span className="font-bold">Title:</span>
 					<span className="ml-3">{post.title}</span>
-				</h2>
+				</h3>
 
-				<h2 className="p-3">
+				<h3 className="p-3">
 					<span className="font-bold">Author:</span>
 					<span className="ml-3">{user.name}</span>
-				</h2>
+				</h3>
 				<hr />
 				<p className="p-3 text-justify">
 					<span className="font-bold">Post:</span>
