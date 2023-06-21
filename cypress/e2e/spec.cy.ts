@@ -6,6 +6,11 @@ context("Test API routes", () => {
 		cy.get("h2").should("contain", "100 Posts");
 	});
 
+	it("should load post no 1 route", () => {
+		cy.visit("http://localhost:3000/post/1");
+		cy.get("span").should("contain", "Leanne Graham");
+	});
+
 	it("should load homepage on production server", () => {
 		cy.visit("https://getup-task.vercel.app/");
 		cy.get("h1").should("contain", "GetUp Task");
@@ -20,7 +25,7 @@ context("Test API routes", () => {
 		});
 	});
 
-	it("should load post no 1", () => {
+	it("should load post no 1 API", () => {
 		cy.request("GET", "https://jsonplaceholder.typicode.com/posts/1").then((response) => {
 			expect(response.status).to.eq(200);
 			expect(response.body).to.have.property("id", 1);
@@ -28,10 +33,9 @@ context("Test API routes", () => {
 		});
 	});
 
-	it("should load user no 1", () => {
+	it("should load user no 1 API", () => {
 		cy.request("GET", "https://jsonplaceholder.typicode.com/users/1").then((response) => {
 			expect(response.status).to.eq(200);
-			console.log(response.body);
 			expect(response.body).to.have.property("id", 1);
 			expect(response.body).to.have.property("name", "Leanne Graham");
 			expect(response.body).to.have.property("username", "Bret");
