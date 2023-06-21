@@ -7,7 +7,9 @@ export default async function Page() {
 			<main>
 				<Products />
 			</main>
-			<aside>{/* <Posts /> */}</aside>
+			<aside>
+				<Posts />
+			</aside>
 		</div>
 	);
 }
