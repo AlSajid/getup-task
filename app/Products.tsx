@@ -61,7 +61,6 @@ export default function Products() {
 				<h1>Loading...</h1>
 			) : (
 				<button
-					type="button"
 					disabled={!hasMore}
 					onClick={() => {
 						setPage(page + 1);
