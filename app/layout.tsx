@@ -1,5 +1,9 @@
 import Link from "next/link";
 import "./globals.css";
+import AuthProvider from "@/components/AuthProvider";
+
+import Header from "@/components/Header";
+import {Toaster} from "react-hot-toast";
 
 export const metadata = {
 	title: "GetUp Task",
@@ -9,15 +13,13 @@ export const metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
 	return (
 		<html lang="en">
-			<body className=" bg-slate-100">
-				<Link href="/">
-					<header className="bg-white p-7 text-center text-3xl font-medium">
-						<h1>GetUp Task</h1>
-					</header>
-				</Link>
-
-				{children}
-			</body>
+			<AuthProvider>
+				<body className=" bg-slate-100">
+					<Toaster />
+					<Header />
+					{children}
+				</body>
+			</AuthProvider>
 		</html>
 	);
 }
